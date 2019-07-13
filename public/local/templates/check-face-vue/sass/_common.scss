@@ -1,0 +1,195 @@
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 320px;
+  font-family: Open Sans, -apple-system, Roboto, Helvetica neue, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+[v-cloak] {
+  display: none!important;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding: 0 15px;
+  min-width: 320px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &--page {
+    max-width: 960px;
+
+    p {
+      line-height: 24px;
+    }
+  }
+}
+
+.container__pricing {
+  max-width: 640px;
+  box-shadow: -2px 0 0 0 rgba(26, 104, 170, 0.5);
+  padding-top: 5px;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-color-1 {
+  color: $style-color-1;
+}
+
+.text-color-2 {
+  color: $style-color-2;
+}
+
+.tooltip {
+  position: fixed;
+  padding: 7px 21px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1300;
+  max-width: 315px;
+}
+
+.dashed-blue {
+  text-decoration: none;
+  border-bottom: 1px dashed;
+  color: #1a688c;
+  cursor: pointer;
+}
+
+.dashed-white {
+  text-decoration: none;
+  border-bottom: 1px dashed;
+  color: white;
+  cursor: pointer;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+a {
+  transition: opacity .05s ease-out;
+  color: #1c96cc;
+  text-decoration: underline;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.underline {
+  text-decoration: underline;
+  text-underline-position: under;
+  color: inherit;
+
+  &--white {
+    color: white;
+  }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: rgba(0, 0, 0, .2);
+  width: 100%;
+}
+
+h3 {
+  font-size: 28px;
+  text-align: center;
+  margin: 60px 0 40px;
+}
+
+h4 {
+  font-size: 28px;
+  margin: 30px 0 0;
+}
+
+h5 {
+  color: rgba(0, 0, 0, .83);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.list li {
+  line-height: 24px;
+  margin-bottom: 14px;
+}
+
+#bx-panel.bx-panel-folded #bx-panel-menu:hover {
+  background: scroll transparent url(/bitrix/js/main/core/images/panel/top-panel-sprite-2.png) 0 -1977px !important;
+}
+#bx-panel.bx-panel-folded #bx-panel-top #bx-panel-menu.bx-pressed {
+  background: scroll transparent url(/bitrix/js/main/core/images/panel/top-panel-sprite-2.png) 0 -2016px !important;
+}
+
+@media (min-width: $tablet-width) {
+  h3 {
+    font-size: 38px;
+  }
+
+  .section {
+    padding-bottom: 40px;
+  }
+}

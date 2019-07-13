@@ -1,0 +1,22 @@
+@mixin font-height($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin list-reset() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin button() {
+  border-radius: 3px;
+  border: 1px solid rgba(51, 51, 51, 0.3);
+  background-color: #38a3d4;
+  box-shadow: 0 1px 1px rgba(0,0,0,.2), inset 0 1px 1px hsla(0,0%,100%,.45);
+  cursor: pointer;
+
+  &:hover {
+    background-color: #3caee1;
+  }
+}

@@ -1,0 +1,25 @@
+.button {
+  @include button();
+
+  user-select: none;
+  padding: 8px 18px;
+  font-size: 14px;
+  color: white;
+
+  &:active {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  &--icon {
+    display: flex;
+    align-items: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    svg {
+      fill: white;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
