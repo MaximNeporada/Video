@@ -9,11 +9,47 @@
   margin: 0;
 }
 
+@mixin v-button() {
+  position: relative;
+  background-color: transparent;
+  background: linear-gradient(to left,rgba(255, 255, 255, 0) 57%,rgba(199, 132, 105, 0.55) 100%);
+  box-shadow: 7px 5px 27px 0px rgba(0, 0, 0, 0.45);
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: left 0.3s;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: $bg-style-1;
+    opacity: 0.42;
+
+    z-index: -1;
+
+    transition: all 0.3s;
+  }
+  &:hover {
+    box-shadow: 7px 5px 27px 0px rgba(0, 0, 0, 0.8);
+  }
+  &:hover::after {
+    background-color: $bg-style-2;
+    opacity: 1;
+  }
+}
+
 @mixin button() {
   border-radius: 3px;
   border: 1px solid rgba(51, 51, 51, 0.3);
   background-color: #38a3d4;
-  box-shadow: 0 1px 1px rgba(0,0,0,.2), inset 0 1px 1px hsla(0,0%,100%,.45);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),inset 0 1px 1px hsla(0, 0%, 100%, 0.45);
   cursor: pointer;
 
   &:hover {

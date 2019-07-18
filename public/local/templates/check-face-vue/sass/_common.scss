@@ -12,7 +12,8 @@ html {
 body {
   min-height: 100vh;
   min-width: 320px;
-  font-family: Open Sans, -apple-system, Roboto, Helvetica neue, Helvetica, sans-serif;
+  font-family: Open Sans, -apple-system, Roboto, Helvetica neue, Helvetica,
+    sans-serif;
   overflow-x: hidden;
 }
 
@@ -23,7 +24,7 @@ body {
 }
 
 [v-cloak] {
-  display: none!important;
+  display: none !important;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -117,7 +118,7 @@ body {
 }
 
 a {
-  transition: opacity .05s ease-out;
+  transition: opacity 0.05s ease-out;
   color: #1c96cc;
   text-decoration: underline;
 
@@ -139,7 +140,7 @@ a {
 hr {
   border: none;
   height: 1px;
-  background: rgba(0, 0, 0, .2);
+  background: rgba(0, 0, 0, 0.2);
   width: 100%;
 }
 
@@ -155,7 +156,7 @@ h4 {
 }
 
 h5 {
-  color: rgba(0, 0, 0, .83);
+  color: rgba(0, 0, 0, 0.83);
   text-transform: uppercase;
   font-weight: 600;
   font-size: 18px;
@@ -168,7 +169,7 @@ input::-webkit-inner-spin-button {
   margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
 }
 
@@ -178,10 +179,12 @@ input[type=number] {
 }
 
 #bx-panel.bx-panel-folded #bx-panel-menu:hover {
-  background: scroll transparent url(/bitrix/js/main/core/images/panel/top-panel-sprite-2.png) 0 -1977px !important;
+  background: scroll transparent
+    url(/bitrix/js/main/core/images/panel/top-panel-sprite-2.png) 0 -1977px !important;
 }
 #bx-panel.bx-panel-folded #bx-panel-top #bx-panel-menu.bx-pressed {
-  background: scroll transparent url(/bitrix/js/main/core/images/panel/top-panel-sprite-2.png) 0 -2016px !important;
+  background: scroll transparent
+    url(/bitrix/js/main/core/images/panel/top-panel-sprite-2.png) 0 -2016px !important;
 }
 
 @media (min-width: $tablet-width) {
