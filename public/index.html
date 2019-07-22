@@ -1,0 +1,1922 @@
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content='True' name='HandheldFriendly' />
+    <title>Document</title>
+    <link rel="stylesheet" href="./local/templates/check-face-vue/template_styles.min.css">
+</head>
+
+<body>
+
+    <div class="baсkground"></div>
+    <div class="v-trainin">
+        <div class="v-trainin__container">
+            <div class="v-trainin__header">
+                <h1 class="v-trainin__title">Карта изучения человека</h1>
+                <p class="v-trainin__sub-title">Выбери черту которую хотел бы изучить</p>
+            </div>
+        </div>
+        <div class="v-trainin__container">
+            <div class="v-trainin__body">
+                <!--  класс selected означает что выбрали даную часть тела(click по ссылке) -->
+                <!--  класс done означает что даную часть тела прошли -->
+                <!-- data-zones и data-zone-popup нужны для js -->
+
+                <div class="v-trainin__main-block-img">
+                    <img class="v-trainin__main-img" src="./assets/images/robot.png" alt="Фото робота">
+                    <img class="v-trainin__main-img-footer" src="./assets/images/robot-footer.png" alt="Фото робота">
+                </div>
+                <div class="v-trainin__zones zones">
+                    <div class="zones__top-zone zones__block done">
+                        <p href="javascript:void(0);" class="zones-block__text zones-block__text--profile">Верхняя
+                            зона</p>
+                        <p href="javascript:void(0);" class="zones-block__text zones-block__text--fullface">Верхняя
+                            зона</p>
+                        <div class="zones__visual"></div>
+
+                    </div>
+                    <div class="zones__forehead zones__block done" data-zone="forehead">
+                        <a href="javascript:void(0);" class="zones-block__link zones-block__link--profile">Лоб</a>
+                        <a href="javascript:void(0);" class="zones-block__link zones-block__link--fullface">Лоб</a>
+                        <div class="zones__visual"></div>
+                    </div>
+                    <div class="zones__eyebrow zones__block done" data-zone="eyebrow">
+                        <a href="javascript:void(0);" class="zones-block__link zones-block__link--profile">Брови</a>
+                        <a href="javascript:void(0);" class="zones-block__link zones-block__link--fullface">Брови</a>
+                        <div class="zones__visual"></div>
+                    </div>
+                    <div class="zones__ear zones__block done" data-zone="ear">
+                        <a href="javascript:void(0);" class="zones-block__link zones-block__link--profile">Уши</a>
+                        <a href="javascript:void(0);" class="zones-block__link zones-block__link--fullface">Уши</a>
+                        <div class="zones__visual"></div>
+                    </div>
+                    <div class="zones__eye zones__block done" data-zone="eye">
+                        <a href="javascript:void(0);" class="zones-block__link zones-block__link--profile">Глаза</a>
+                        <a href="javascript:void(0);" class="zones-block__link zones-block__link--fullface">Глаза</a>
+                        <div class="zones__visual"></div>
+                    </div>
+
+                    <div class="zones__middle-zone zones__block done" data-zone="middle-zone">
+                        <p href="javascript:void(0);" class="zones-block__text zones-block__text--profile">Средняя
+                            зона</p>
+                        <p href="javascript:void(0);" class="zones-block__text  zones-block__text--fullface">Средняя
+                            зона</p>
+                        <div class="zones__visual"></div>
+
+                    </div>
+                    <div class="zones__nose zones__block done" data-zone="nose">
+                        <a href="javascript:void(0);" class="zones-block__link zones-block__link--profile">Нос</a>
+                        <a href="javascript:void(0);" class="zones-block__link zones-block__link--fullface">Нос</a>
+                        <div class="zones__visual"></div>
+                    </div>
+                    <div class="zones__bottom-zone zones__block done" data-zone="bottom-zone">
+                        <p href="javascript:void(0);" class="zones-block__text zones-block__text--profile">Нижняя
+                            зона</p>
+                        <p href="javascript:void(0);" class="zones-block__text zones-block__text--fullface">Нижняя
+                            зона</p>
+                        <div class="zones__visual"></div>
+
+                    </div>
+                    <div class="zones__lip zones__block done" data-zone="lip">
+                        <a href="javascript:void(0);" class="zones-block__link zones-block__link--profile">Губы</a>
+                        <a href="javascript:void(0);" class="zones-block__link zones-block__link--fullface">Губы</a>
+                        <div class="zones__visual"></div>
+                    </div>
+                    <div class="zones__jaw zones__block done" data-zone="jaw">
+                        <a href="javascript:void(0);" class="zones-block__link zones-block__link--profile">Челюсть</a>
+                        <a href="javascript:void(0);" class="zones-block__link zones-block__link--fullface">Челюсть</a>
+                        <div class="zones__visual"></div>
+                    </div>
+                    <div class="zones__chin zones__block done" data-zone="chin">
+                        <a href="javascript:void(0);"
+                            class="zones-block__link zones-block__link--profile">Подбородок</a>
+                        <a href="javascript:void(0);"
+                            class="zones-block__link zones-block__link--fullface">Подбородок</a>
+                        <div class="zones__visual"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="v-trainin__container">
+            <div class="v-trainin__footer">
+                <div class="v-trainin__v-other-menu v-other-menu">
+                    <ul class="v-other-menu__list">
+                        <li class="v-other-menu__item" data-zone="asymmetry">
+                            <a href="javascript:void(0);" class="v-other-menu__button v-button"
+                                target="_blank">Асимметрия
+                                лица</a>
+                        </li>
+                        <li class="v-other-menu__item" data-zone="features">
+                            <a href="javascript:void(0);" class="v-other-menu__button v-button"
+                                target="_blank">Отдельные черты и
+                                комбинации</a>
+                        </li>
+                        <li class="v-other-menu__item" data-zone="areas">
+                            <a href="javascript:void(0);" class="v-other-menu__button v-button" target="_blank">Зоны
+                                лица</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- v-trainin__popups - класс active делает блок видимым(активным) -->
+        <!-- v-trainin__popups-container - класс show показывает popup  -->
+        <!-- v-popups__tittle--middle-righ === заголовок правее центра -->
+        <!-- v-popups__tittle--righ === заголовок с правого края-->
+        <!-- v-popups--position-bottom === расположение попапа снизу
+            v-popups--position-bottom-light  === расположение попапа ниже центра на 80px
+            v-popups--position-right === расположение попапа правее-->
+
+        <div class="v-trainin__popups">
+            <div class="v-trainin__popups-container" data-zone-popup="jaw">
+                <div class="v-popups v-popups--position-bottom">
+                    <h2 class="v-popups__title v-popups__tittle--middle-right">Нижняя челюсть</h2>
+                    <div class=v-popups__content>
+                        <div class="v-popup__level level">
+                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Теория</span>
+                                    </a>
+                                </li>
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Ширина</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Тяжесть</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Желваки</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Угол</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-popup__level level level--disabled">
+                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Выдвинутость</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Верхняя челюсть</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Высота верхней челюсти</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="v-trainin__popups-container" data-zone-popup="chin">
+                <div class="v-popups v-popups--position-bottom v-popups--position-right">
+                    <h2 class="v-popups__title v-popups__tittle--middle-right">Подбородок</h2>
+                    <div class=v-popups__content>
+                        <div class="v-popup__level level">
+                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Теория</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Тяжесть</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">выступ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-popup__level level level--disabled">
+                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Ширина</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Мясистость</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Форма</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="v-trainin__popups-container" data-zone-popup="lip">
+                <div class="v-popups v-popups--position-bottom  v-popups--position-right">
+                    <h2 class="v-popups__title v-popups__tittle--right">Рот</h2>
+                    <div class=v-popups__content>
+                        <div class="v-popup__level level">
+                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Теория</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Размер рта</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="v-popups v-popups--position-bottom  v-popups--position-right">
+                    <h2 class="v-popups__title v-popups__tittle--right">Губы</h2>
+                    <div class=v-popups__content>
+                        <div class="v-popup__level level">
+                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Теория</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Верхняя и Нижняя</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Полнота</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Доминанта</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-popup__level level level--disabled">
+                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Линия губ</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Четкость контура</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="v-trainin__popups-container " data-zone-popup="nose">
+                <div class="v-popups v-popups--position-bottom-light  v-popups--position-right">
+                    <h2 class="v-popups__title v-popups__tittle--right">Нос</h2>
+                    <div class=v-popups__content>
+                        <div class="v-popup__level level">
+                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Теория</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Высота</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Длина</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Ширина</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Наклон</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Ширина ноздрей</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="v-popups__wrapper-column">
+
+                    <div class="v-popups v-popups--position-bottom-light  v-popups--position-right">
+                        <h2 class="v-popups__title v-popups__tittle--middle-right">Переносица</h2>
+                        <div class=v-popups__content>
+                            <div class="v-popup__level level">
+                                <p class="level__title">Уровень 1<span class="level__title--disabled">(нет
+                                        доступа)</span>
+                                </p>
+                                <ul class="level__list">
+                                    <li class="level__item level__item--passed">
+                                        <a href="" class="level__button">
+                                            <svg class="level__svg-passed">
+                                                <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                            </svg>
+                                            <span class="level__value">Теория</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="v-popup__level level level--disabled">
+                                <p class="level__title">Уровень 2<span class="level__title--disabled">(нет
+                                        доступа)</span>
+                                </p>
+                                <ul class="level__list">
+                                    <li class="level__item">
+                                        <a href="" class="level__button">
+                                            <svg class="level__svg-passed">
+                                                <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                            </svg>
+                                            <span class="level__value">Впалость</span>
+                                        </a>
+                                    </li>
+                                    <li class="level__item">
+                                        <a href="" class="level__button">
+                                            <svg class="level__svg-passed">
+                                                <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                            </svg>
+                                            <span class="level__value">Ширина</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="v-popups v-popups--position-bottom-light  v-popups--position-right">
+                        <h2 class="v-popups__title v-popups__tittle--middle-right">Желобок</h2>
+                        <div class=v-popups__content>
+                            <div class="v-popup__level level level--disabled">
+                                <p class="level__title">Уровень 2<span class="level__title--disabled">(нет
+                                        доступа)</span>
+                                </p>
+                                <ul class="level__list">
+                                    <li class="level__item">
+                                        <a href="" class="level__button">
+                                            <svg class="level__svg-passed">
+                                                <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                            </svg>
+                                            <span class="level__value">теория</span>
+                                        </a>
+                                    </li>
+                                    <li class="level__item">
+                                        <a href="" class="level__button">
+                                            <svg class="level__svg-passed">
+                                                <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                            </svg>
+                                            <span class="level__value">Ширина</span>
+                                        </a>
+                                    </li>
+                                    <li class="level__item">
+                                        <a href="" class="level__button">
+                                            <svg class="level__svg-passed">
+                                                <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                            </svg>
+                                            <span class="level__value">Глубина</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="v-trainin__popups-container " data-zone-popup="eye">
+                <div class="v-popups v-popups--position-bottom-light">
+                    <h2 class="v-popups__title v-popups__tittle--middle-right">Глаза</h2>
+                    <div class=v-popups__content>
+                        <div class="v-popup__level level">
+                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Теория</span>
+                                    </a>
+                                </li>
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Размер</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Выпуклость</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Глубина п</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Ширина п</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-popup__level level level--disabled">
+                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Наклон</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Верхнее веко</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Напряженность в</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="v-trainin__popups-container" data-zone-popup="ear">
+                <div class="v-popups v-popups--position-bottom">
+                    <h2 class="v-popups__title v-popups__tittle--middle-right">Уши</h2>
+                    <div class=v-popups__content>
+                        <div class="v-popup__level level">
+                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Теория</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-popup__level level level--disabled">
+                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Размер</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Оттопыренность</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="v-trainin__popups-container" data-zone-popup="eyebrow">
+                <div class="v-popups v-popups--position-bottom">
+                    <h2 class="v-popups__title v-popups__tittle--right">Брови</h2>
+                    <div class=v-popups__content>
+                        <div class="v-popup__level level">
+                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Теория</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-popup__level level level--disabled">
+                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Выраженность</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Высота</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Наклон</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Форма</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="v-trainin__popups-container" data-zone-popup="eyebrow">
+                <div class="v-popups v-popups--position-bottom">
+                    <h2 class="v-popups__title v-popups__tittle--right">Брови</h2>
+                    <div class=v-popups__content>
+                        <div class="v-popup__level level">
+                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Теория</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-popup__level level level--disabled">
+                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Выраженность</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Высота</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Наклон</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Форма</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="v-trainin__popups-container " data-zone-popup="forehead">
+                <div class="v-popups">
+                    <h2 class="v-popups__title v-popups__tittle--right">Лоб</h2>
+                    <div class=v-popups__content>
+                        <div class="v-popup__level level">
+                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Теория</span>
+                                    </a>
+                                </li>
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Скос</span>
+                                    </a>
+                                </li>
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Зоны</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-popup__level level level--disabled">
+                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Надбровные д</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Выраженность</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Линия волос</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Форма ЛВ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-popup__level level level--disabled">
+                            <p class="level__title">Уровень 3<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Верхняя зона лица</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="v-trainin__popups-container" data-zone-popup="areas">
+                <div class="v-popups  v-popups--position-bottom">
+                    <h2 class="v-popups__title v-popups__tittle--right">Зоны лица</h2>
+                    <div class=v-popups__content>
+                        <div class="v-popup__level level">
+                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Теория</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-popup__level level level--disabled">
+                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Верхняя</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Средняя</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Нижняя</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="v-trainin__popups-container" data-zone-popup="asymmetry">
+                <div class="v-popups  v-popups--position-bottom">
+                    <h2 class="v-popups__title v-popups__tittle--middle-right">Асимметрия</h2>
+                    <div class=v-popups__content>
+                        <div class="v-popup__level level">
+                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Теория</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-popup__level level level--disabled">
+                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Нос</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Глаза</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Желваки</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Брови</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Уголки губ</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Челюсти</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Наклон глаз</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-popup__level level level--disabled">
+                            <p class="level__title">Уровень 3<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Подбородок</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Веки</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Асимметрия</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="v-trainin__popups-container" data-zone-popup="features">
+                <div class="v-popups  v-popups--position-bottom-light">
+                    <h2 class="v-popups__title v-popups__tittle--right">Отдельные черты и Комбинации</h2>
+                    <div class=v-popups__content>
+                        <div class="v-popup__level level">
+                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Теория</span>
+                                    </a>
+                                </li>
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Профиль</span>
+                                    </a>
+                                </li>
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Шея</span>
+                                    </a>
+                                </li>
+                                <li class="level__item level__item--passed">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Скулы</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Форма головы</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-popup__level level level--disabled">
+                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Геометрия головы</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Длина шеи</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Выраженность скул</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Формы профиля</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Скос профиля</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Направленность скул</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Затылок</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-popup__level level level--disabled">
+                            <p class="level__title">Уровень 3<span class="level__title--disabled">(нет доступа)</span>
+                            </p>
+                            <ul class="level__list">
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Выраженность затылка</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Акцент профиля</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Алгоритм восприятия</span>
+                                    </a>
+                                </li>
+                                <li class="level__item">
+                                    <a href="" class="level__button">
+                                        <svg class="level__svg-passed">
+                                            <use xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                        </svg>
+                                        <span class="level__value">Черты и Комбиаации</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="v-trainin__popups-container  v-trainin__popups-container--background show "
+                data-zone-popup="web">
+                <img class="v-trainin__popup-background" src="./assets/images/popup-background.png" alt="задний фон">
+                <div class="v-web">
+                    <div class="v-web__available">
+                        <p class="v-web__available-text">Доступно для изучения: <span class=" v-web__available-count">22
+                                видео</span></p>
+                    </div>
+                    <div class="v-web__container">
+                        <button class="v-web__btn v-web__btn--scroll-top">
+                            <svg class="v-web__btn-svg">
+                                <use xlink:href="./assets/images/sprite/sprite.svg#arrow" />
+                            </svg>
+                        </button>
+
+                        <div class="v-web__container-scroll js-scroll-element">
+                            <h3 class="v-web__title">Нижняя зона лица</h3>
+                            <div class="v-web__wrapper">
+                                <div class="v-web__item">
+                                    <h2 class="v-web__item-title">Нижняя челюсть</h2>
+                                    <div class="v-web__item-content">
+                                        <div class="level">
+                                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет
+                                                    доступа)</span>
+                                            </p>
+                                            <ul class="level__list">
+                                                <li class="level__item level__item--passed">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Теория</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item level__item--passed">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Ширина</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Тяжесть</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Желваки</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Угол</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="level level--disabled">
+                                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет
+                                                    доступа)</span>
+                                            </p>
+                                            <ul class="level__list">
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Выдвинутость</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Верхняя челюсть</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Высота верхней челюсти</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="v-web__item">
+                                    <h2 class="v-web__item-title">Рот</h2>
+                                    <div class="v-web__item-content">
+                                        <div class="level">
+                                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет
+                                                    доступа)</span>
+                                            </p>
+                                            <ul class="level__list">
+                                                <li class="level__item level__item--passed">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Теория</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Размер рта</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="v-web__item">
+                                    <h2 class="v-web__item-title">Губы</h2>
+                                    <div class="v-web__item-content">
+                                        <div class="level">
+                                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет
+                                                    доступа)</span>
+                                            </p>
+                                            <ul class="level__list">
+                                                <li class="level__item level__item--passed">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Теория</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Верхняя и Нижняя</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Полнота</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Доминанта</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="level level--disabled">
+                                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет
+                                                    доступа)</span>
+                                            </p>
+                                            <ul class="level__list">
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Линия губ</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Четкость контура</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="v-web__item">
+                                    <h2 class="v-web__item-title">Подбородок</h2>
+                                    <div class="v-web__item-content">
+                                        <div class="level">
+                                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет
+                                                    доступа)</span>
+                                            </p>
+                                            <ul class="level__list">
+                                                <li class="level__item level__item--passed">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Теория</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Тяжесть</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">выступ</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="level level--disabled">
+                                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет
+                                                    доступа)</span>
+                                            </p>
+                                            <ul class="level__list">
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Ширина</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Мясистость</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Форма</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="v-web__title">Средняя зона лица</h3>
+                            <div class="v-web__wrapper">
+                                <div class="v-web__item">
+                                    <h2 class="v-web__item-title">Нижняя челюсть</h2>
+                                    <div class="v-web__item-content">
+                                        <div class="level">
+                                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет
+                                                    доступа)</span>
+                                            </p>
+                                            <ul class="level__list">
+                                                <li class="level__item level__item--passed">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Теория</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item level__item--passed">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Ширина</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Тяжесть</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Желваки</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Угол</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="level level--disabled">
+                                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет
+                                                    доступа)</span>
+                                            </p>
+                                            <ul class="level__list">
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Выдвинутость</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Верхняя челюсть</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Высота верхней челюсти</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="v-web__item">
+                                    <h2 class="v-web__item-title">Рот</h2>
+                                    <div class="v-web__item-content">
+                                        <div class="level">
+                                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет
+                                                    доступа)</span>
+                                            </p>
+                                            <ul class="level__list">
+                                                <li class="level__item level__item--passed">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Теория</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Размер рта</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="v-web__item">
+                                    <h2 class="v-web__item-title">Губы</h2>
+                                    <div class="v-web__item-content">
+                                        <div class="level">
+                                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет
+                                                    доступа)</span>
+                                            </p>
+                                            <ul class="level__list">
+                                                <li class="level__item level__item--passed">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Теория</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Верхняя и Нижняя</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Полнота</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Доминанта</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="level level--disabled">
+                                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет
+                                                    доступа)</span>
+                                            </p>
+                                            <ul class="level__list">
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Линия губ</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Четкость контура</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="v-web__item">
+                                    <h2 class="v-web__item-title">Подбородок</h2>
+                                    <div class="v-web__item-content">
+                                        <div class="level">
+                                            <p class="level__title">Уровень 1<span class="level__title--disabled">(нет
+                                                    доступа)</span>
+                                            </p>
+                                            <ul class="level__list">
+                                                <li class="level__item level__item--passed">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Теория</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Тяжесть</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">выступ</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="level level--disabled">
+                                            <p class="level__title">Уровень 2<span class="level__title--disabled">(нет
+                                                    доступа)</span>
+                                            </p>
+                                            <ul class="level__list">
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Ширина</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Мясистость</span>
+                                                    </a>
+                                                </li>
+                                                <li class="level__item">
+                                                    <a href="" class="level__button">
+                                                        <svg class="level__svg-passed">
+                                                            <use
+                                                                xlink:href="./assets/images/sprite/sprite.svg#checked" />
+                                                        </svg>
+                                                        <span class="level__value">Форма</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="v-web__btn v-web__btn--scroll-bottom active">
+                            <svg class="v-web__btn-svg">
+                                <use xlink:href="./assets/images/sprite/sprite.svg#arrow" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./local/templates/check-face-vue/js/main.min.js"></script>
+    <script>
+        function hoverLinkZones() {
+            const arrLinks = document.querySelectorAll('.zones-block__link');
+            arrLinks.forEach(element => {
+                element.addEventListener('mouseenter', function () {
+                    let parent = element.parentElement;
+                    let allLink = parent.querySelectorAll('.zones-block__link');
+                    allLink.forEach(element => {
+                        element.classList.add('hover');
+                    });
+                });
+                element.addEventListener('mouseleave', function () {
+                    let parent = element.parentElement;
+                    let allLink = parent.querySelectorAll('.zones-block__link');
+                    allLink.forEach(element => {
+                        element.classList.remove('hover');
+                    });
+                })
+            });
+        }
+
+        function eventdontShowScroll() {
+            var parent = document.querySelector('.v-web__cotainer');
+            var child = document.querySelector('.v-web__container-scroll');
+            child.style.paddingRight = child.offsetWidth - child.clientWidth + "px";
+        }
+
+        function eventLinkClick() {
+            var arrLinksZone = document.querySelectorAll('.zones-block__link');
+            var arrLinksOther = document.querySelectorAll('.v-other-menu__button');
+            arrLinksZone.forEach(element => {
+                element.addEventListener('click', function () {
+                    linkClick(this);
+                });
+            });
+            arrLinksOther.forEach(element => {
+                element.addEventListener('click', function () {
+                    linkClick(this);
+                });
+            });
+        }
+        function linkClick(link) {
+            linkRemoveClassSelected();
+            var parent = link.parentElement;
+            var arrPopups = document.querySelectorAll('.v-trainin__popups-container');
+            console.log(parent);
+            console.log("parent ^");
+
+            var parentData = parent.getAttribute('data-zone');
+            arrPopups.forEach(element => {
+                var elementData = element.getAttribute('data-zone-popup');
+                console.log(elementData);
+                if (elementData === parentData) {
+                    console.log(element);
+                    eventPopupOpen(element);
+                }
+            });
+            parent.classList.add("selected");
+        }
+        function linkRemoveClassSelected() {
+            var arrLinksZone = document.querySelectorAll('.zones__block.selected');
+            var arrLinksOther = document.querySelectorAll('.v-other-menu__item.selected');
+            if (arrLinksZone.length > 0) {
+                arrLinksZone.forEach(element => {
+                    element.classList.remove('selected');
+                });
+            }
+            if (arrLinksOther.length > 0) {
+                arrLinksOther.forEach(element => {
+                    element.classList.remove('selected');
+                });
+            }
+        }
+        function eventPopupOpen(popupContainer) {
+            closeAllPopup();
+            var vPopupWrapper = document.querySelector('.v-trainin__popups');
+            vPopupWrapper.classList.add('active');
+            popupContainer.classList.add('show');
+        }
+
+
+        function eventPopupCLose() {
+            var vPopupWrapper = document.querySelector('.v-trainin__popups');
+            vPopupWrapper.addEventListener('click', function (e) {
+                var target = e.target;
+                if (target === vPopupWrapper) {
+                    closeAllPopup();
+                };
+
+            })
+
+            window.onkeydown = function (event) {
+                if (event.keyCode == 27) {
+                    closeAllPopup();
+                }
+            };
+        }
+
+        function closeAllPopup() {
+            var vPopupWrapper = document.querySelector('.v-trainin__popups');
+            var arrPopups = document.querySelectorAll('.v-trainin__popups-container');
+            arrPopups.forEach(element => {
+
+                element.classList.remove('show');
+            });
+            vPopupWrapper.classList.remove('active');
+            linkRemoveClassSelected();
+        }
+
+        function eventScrollOnPopup() {
+            var arrScrollElement = document.querySelectorAll('.js-scroll-element');
+            arrScrollElement.forEach(element => {
+                var parent = element.parentNode;
+                var buttonBottom = parent.querySelector('.v-web__btn--scroll-bottom');
+                var buttonTop = parent.querySelector('.v-web__btn--scroll-top');
+                console.log(parent);
+                console.log(buttonTop);
+                console.log(buttonBottom);
+                element.addEventListener('scroll', function (e) {
+                    var scrolled = element.scrollTop;
+                    console.log(scrolled);
+                    if (scrolled <= 50) {
+                        buttonBottom.classList.add('active');
+                        buttonTop.classList.remove('active')
+                    } else if (scrolled >= element.scrollHeight - element.offsetHeight - 50) {
+                        buttonBottom.classList.remove('active');
+                        buttonTop.classList.add('active');
+                    } else {
+                        buttonBottom.classList.add('active');
+                        buttonTop.classList.add('active');
+                    }
+                });
+
+                buttonBottom.addEventListener('click', function () {
+                    var scrollTopElement = element.offsetHeight - 50;
+                    scrollTopElement > element.scrollHeight - element.offsetHeight ? scrollTopElement = element.scrollHeight - element.offsetHeight : scrollTopElement;
+                    console.log(scrollTopElement);
+                    element.scrollTo({
+                        top: scrollTopElement,
+                        behavior: "smooth"
+                    });
+                });
+
+                buttonTop.addEventListener('click', function () {
+                    var scrollTopElement = element.scrollTop - element.offsetHeight;
+                    scrollTopElement < 0 ? scrollTopElement = 0 : scrollTopElement;
+                    console.log(scrollTopElement);
+                    element.scrollTo({
+                        top: scrollTopElement,
+                        behavior: "smooth"
+                    });
+                });
+
+            });
+
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            eventScrollOnPopup();
+            eventLinkClick();
+            eventPopupCLose();
+            hoverLinkZones();
+            eventdontShowScroll();
+        });
+
+    </script>
+    <script src="./local/templates/check-face-vue/js/vendor/svg4everybody.min.js"></script>
+</body>
+
+</html>
+
+<!-- классы v-trainin__popups 
+-->
+<!-- v-trainin__popups - класс active делает блок видимым(активным) -->
+<!-- v-trainin__popups-container - класс show показывает popup  -->
+<!-- v-popups__tittle--middle-righ === заголовок правее центра -->
+<!-- v-popups__tittle--righ === заголовок с правого края-->
+<!-- v-popups--position-bottom === расположение попапа снизу
+            v-popups--position-bottom-light  === расположение попапа ниже центра на 80px
+            v-popups--position-right === расположение попапа правее-->

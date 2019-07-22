@@ -1,0 +1,14 @@
+.baсkground {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: #191f2e;
+  background-image: url("/public/assets/images/v-background.png");
+  background-position: center;
+  background-size: cover;
+
+  z-index: -1;
+}

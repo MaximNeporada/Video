@@ -1,0 +1,155 @@
+.v-trainin {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.v-trainin__container {
+  margin: 0 auto;
+  padding: 0 70px;
+  min-width: 320px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+// header
+
+.v-trainin__header {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 80px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.v-trainin__title {
+  margin: 0;
+  padding: 0;
+
+  margin-bottom: 15px;
+
+  @include font-height(30px, 1.1);
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: $text-style-1;
+}
+
+.v-trainin__sub-title {
+  margin: 0;
+  padding: 0;
+
+  @include font-height(16px, 18px);
+  font-weight: 400;
+  letter-spacing: 0.75px;
+  color: $text-style-2;
+}
+
+// body
+.v-trainin__body {
+  position: relative;
+  width: 100%;
+  padding-bottom: 10%;
+  max-height: calc(100vh - 196px);
+  overflow: hidden;
+}
+
+.v-trainin__main-block-img {
+  margin: 0px -70px;
+  padding: 0 17px;
+  position: relative;
+
+  z-index: -1;
+}
+
+.v-trainin__main-img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.v-trainin__main-img-footer {
+  position: absolute;
+  top: 65.3%;
+  left: -20px;
+  width: 100%;
+}
+
+.v-trainin__zones {
+  width: 100%;
+}
+
+// footer
+.v-trainin__footer {
+  margin: 0 -70px;
+  margin-top: -170px;
+}
+
+.v-trainin__v-other-menu {
+  width: 155px;
+}
+
+.v-trainin__popups {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: none;
+  bottom: 0;
+  right: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.v-trainin__popups.active {
+  display: flex;
+}
+
+.v-trainin__popups-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: calc(100vw - 40px);
+}
+
+.v-trainin__popups-container--background {
+  width: 100%;
+  max-width: 1400px;
+  max-height: calc(100vh - 200px);
+
+  position: relative;
+}
+
+.v-trainin__popups-container.show {
+  display: flex;
+}
+
+.v-trainin__popups-container.show .v-popups {
+  animation: showPopup 0.5s linear forwards;
+}
+
+@keyframes showPopup {
+  0% {
+    opacity: 0;
+    transform: translate(0, 120%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.v-trainin__popup-background {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+@media all and (max-width: $big-tablet-width) {
+  .v-trainin__container {
+    max-width: 950px;
+  }
+}

@@ -1,0 +1,587 @@
+.zones {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 115px;
+}
+
+.zones__block {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 0 182px;
+}
+
+.zones-block__link {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  min-width: 100px;
+
+  @include font-height(9px, 12px);
+  font-weight: 400;
+  color: $text-style-1;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.6px;
+
+  opacity: 0.6;
+
+  transition: all 0.3s;
+  z-index: 4;
+}
+
+.zones-block__link::after {
+  content: "";
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -10px;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 20px;
+  box-shadow: 0 0 40px 20px rgba(0, 185, 255, 0.4),
+    inset 0 0 30px rgba(0, 185, 255, 0.4);
+  opacity: 0;
+  border-radius: 25px;
+  z-index: -1;
+}
+
+.zones-block__text {
+  margin: 0;
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  min-width: 100px;
+
+  @include font-height(12px, 12px);
+  font-weight: 400;
+  color: $text-style-1;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.6px;
+
+  z-index: 3;
+  opacity: 0.6;
+}
+
+.zones__visual {
+  position: absolute;
+  left: 0;
+  width: calc(100% + 100px);
+  z-index: -1;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+
+  transition: all 0.3s;
+}
+
+.zones__top-zone .zones-block__text--profile {
+  left: 8%;
+}
+
+.zones__top-zone .zones-block__text--fullface {
+  left: 9px;
+  top: 8px;
+}
+
+.zones__forehead .zones__visual {
+  height: 300px;
+  top: -141px;
+
+  background-position: 274px 0;
+  background-image: url("/public/assets/images/robot-hover/forhead-hover-robot.png");
+}
+
+.zones__forehead .zones-block__link {
+  font-size: 12px;
+}
+
+.zones__forehead .zones-block__link--profile {
+  left: 24%;
+  top: -8px;
+}
+
+.zones__forehead .zones-block__link--fullface {
+  top: 2px;
+  left: -1px;
+}
+
+.zones__eyebrow {
+  margin-top: 6px;
+}
+
+.zones__eyebrow .zones-block__link--profile {
+  left: 24%;
+  top: 4px;
+}
+
+.zones__eyebrow .zones-block__link--fullface {
+  left: 8%;
+  top: 10px;
+}
+
+.zones__eyebrow .zones__visual {
+  height: 174px;
+  top: -58px;
+
+  background-position: 252px 0;
+  background-image: url(/public/assets/images/robot-hover/eyebrow-hover-robot.png);
+}
+
+.zones__ear {
+  margin-top: 32px;
+}
+
+.zones__ear .zones-block__link--profile {
+  left: -16%;
+}
+.zones__ear .zones-block__link--fullface {
+  left: -26%;
+  top: 20px;
+  z-index: 5;
+}
+
+.zones__ear .zones__visual {
+  height: 256px;
+  top: -87px;
+  background-position: 28px 0;
+  background-image: url(/public/assets/images/robot-hover/ear-hover-robot.png);
+}
+
+.zones__eye {
+  margin-top: -10px;
+}
+
+.zones__eye .zones-block__link--profile {
+  left: 20%;
+}
+
+.zones__eye .zones-block__link--fullface {
+  top: 7px;
+  left: -12%;
+  z-index: 5;
+}
+
+.zones__eye .zones__visual {
+  height: 174px;
+  top: -102px;
+  background-position: 286px 0;
+  background-image: url(/public/assets/images/robot-hover/eye-hover-robot.png);
+}
+
+.zones__middle-zone {
+  margin-top: -10px;
+}
+
+.zones__middle-zone .zones-block__text--profile {
+  left: 5%;
+  top: -44px;
+}
+
+.zones__middle-zone .zones-block__text--fullface {
+  left: 13px;
+  top: 11px;
+}
+
+.zones__nose {
+  margin-top: 4px;
+}
+
+.zones__nose .zones-block__link--profile {
+  left: 30%;
+  top: -16px;
+}
+
+.zones__nose .zones__visual {
+  height: 266px;
+  top: -147px;
+
+  background-position: 340px 0;
+  background-image: url(/public/assets/images/robot-hover/nose-hover-robot.png);
+}
+
+.zones__bottom-zone {
+  margin-top: 20px;
+}
+
+.zones__bottom-zone .zones-block__text--profile {
+  left: 9%;
+  top: 3px;
+}
+
+.zones__bottom-zone .zones-block__text--fullface {
+  left: 12px;
+  top: 6px;
+}
+
+.zones__lip {
+  margin-top: 6px;
+}
+
+.zones__lip .zones-block__link {
+  z-index: 6;
+}
+
+.zones__lip .zones-block__link--profile {
+  left: 26%;
+  top: -18px;
+}
+
+.zones__lip .zones__visual {
+  height: 190px;
+  top: -88px;
+  background-position: 328px 0;
+  background-image: url(/public/assets/images/robot-hover/lip-hover-robot.png);
+}
+
+.zones__jaw {
+  margin-top: -40px;
+}
+
+.zones__jaw .zones-block__link--profile {
+  left: 10%;
+  top: 5px;
+}
+
+.zones__jaw .zones-block__link--fullface {
+  top: 14px;
+  left: 13.5%;
+}
+
+.zones__jaw .zones__visual {
+  height: 276px;
+  top: -145px;
+  background-position: 108px 0;
+  background-image: url(/public/assets/images/robot-hover/jaw-hover-robot.png);
+}
+
+.zones__chin {
+  margin-top: 22px;
+}
+
+.zones__chin .zones-block__link--profile {
+  top: -18px;
+  left: 21%;
+}
+
+.zones__chin .zones-block__link--fullface {
+  top: 12px;
+  left: 2px;
+}
+
+.zones__chin .zones__visual {
+  height: 216px;
+  top: -101px;
+  background-position: 278px 0;
+  background-image: url(/public/assets/images/robot-hover/chin-hover-robot.png);
+}
+
+//  hover not active
+
+.zones-block__link:hover,
+.zones-block__link:focus,
+.zones-block__link:hover::after,
+.zones-block__link:focus::after,
+.zones-block__link:hover ~ .zones__visual,
+.zones-block__link:focus ~ .zones__visual,
+.zones-block__link.hover,
+.zones-block__link.hover::after {
+  opacity: 1;
+}
+
+// selected
+
+.zones__block.selected .zones__visual {
+  opacity: 1;
+  z-index: 2;
+}
+
+.zones__block.selected .zones-block__link,
+.zones__block.selected .zones-block__text {
+  opacity: 0;
+}
+
+.zones__forehead.selected .zones__visual {
+  height: 200px;
+  top: -79px;
+  background-position: 334px 0;
+  background-image: url("/public/assets/images/robot-selected/forhead-selected.png");
+}
+
+.zones__eyebrow.selected .zones__visual {
+  height: 120px;
+  top: -19px;
+  background-position: 313px 0;
+  background-image: url("/public/assets/images/robot-selected/eyebrow-selected.png");
+}
+
+.zones__ear.selected .zones__visual {
+  height: 200px;
+  top: -44px;
+  background-position: 65px 0;
+  background-image: url("/public/assets/images/robot-selected/ear-selected.png");
+}
+
+.zones__eye.selected .zones__visual {
+  height: 200px;
+  top: -94px;
+  background-position: 274px 0;
+  background-image: url("/public/assets/images/robot-selected/eye-selected.png");
+}
+
+.zones__nose.selected .zones__visual {
+  height: 180px;
+  top: -87px;
+  background-position: 243px 0;
+  background-image: url("/public/assets/images/robot-selected/nose-selected.png");
+}
+.zones__lip.selected .zones__visual {
+  height: 201px;
+  top: -62px;
+  background-position: 298px 0;
+  background-image: url("/public/assets/images/robot-selected/lip-selected.png");
+}
+
+.zones__jaw.selected .zones__visual {
+  height: 320px;
+  top: -113px;
+  background-position: -5px 0;
+  background-image: url("/public/assets/images/robot-selected/jaw-selected.png");
+}
+
+.zones__chin.selected .zones__visual {
+  height: 183px;
+  top: -41px;
+  background-position: 339px 0;
+  background-image: url("/public/assets/images/robot-selected/chin-selected.png");
+}
+
+//  done
+.zones__block.done .zones__visual {
+  opacity: 1;
+  z-index: 2;
+}
+.done .zones-block__link:hover ~ .zones__visual,
+.done .zones-block__link:focus ~ .zones__visual {
+  opacity: 0;
+}
+.zones__forehead.done .zones__visual {
+  height: 145px;
+  top: -90px;
+  background-position: -49px 0;
+  background-image: url(/public/assets/images/robot-done/forhead.png);
+}
+
+.zones__eyebrow.done .zones__visual {
+  height: 85px;
+  top: -10px;
+  background-position: -49px 0;
+  background-image: url(/public/assets/images/robot-done/eyebrown.png);
+}
+
+.zones__ear.done .zones__visual {
+  height: 200px;
+  top: -25px;
+  background-position: -49px 0;
+  background-image: url(/public/assets/images/robot-done/ear.png);
+}
+
+.zones__eye.done .zones__visual {
+  height: 90px;
+  top: -47px;
+  background-position: -47px 0;
+  background-image: url(/public/assets/images/robot-done/eye.png);
+  z-index: 3;
+}
+
+.zones__nose.done .zones__visual {
+  height: 155px;
+  background-position: -48px 0;
+  top: -89px;
+  background-image: url(/public/assets/images/robot-done/nose.png);
+}
+
+.zones__lip.done .zones__visual {
+  height: 135px;
+  top: -90px;
+  background-position: -48px 0;
+  background-image: url(/public/assets/images/robot-done/lip.png);
+  z-index: 3;
+}
+
+.zones__jaw.done .zones__visual {
+  height: 290px;
+  top: -104px;
+  background-position: 1px 0;
+  background-image: url(/public/assets/images/robot-done/jaw.png);
+}
+
+.zones__chin.done .zones__visual {
+  height: 110px;
+  top: -44px;
+  background-position: -47px 0px;
+  background-image: url(/public/assets/images/robot-done/chin.png);
+}
+
+.zones__bottom-zone.done .zones__visual {
+  height: 210px;
+  top: 8px;
+  background-position: 3px 0;
+  background-image: url(/public/assets/images/robot-done/bottom-zone.png);
+}
+
+.zones__middle-zone.done .zones__visual {
+  height: 180px;
+  top: -70px;
+  background-position: -48px 0;
+  background-image: url(/public/assets/images/robot-done/midle-zone.png);
+}
+
+.zones__top-zone.done .zones__visual {
+  height: 280px;
+  top: -112px;
+  background-position: -48px 0;
+  background-image: url("/public/assets/images/robot-done/top-zone.png");
+}
+
+@media all and (max-width: $big-tablet-width) {
+  .zones {
+    padding-top: 60px;
+  }
+
+  .zones__block {
+    padding: 0 120px;
+  }
+
+  .zones__forehead .zones-block__link--profile {
+    top: 21px;
+  }
+  .zones-block__link,
+  .zones-block__text {
+    padding: 7px 20px;
+  }
+  .zones__visual {
+    background-size: contain;
+  }
+  .zones__forehead .zones__visual {
+    background-size: 72%;
+    height: 210px;
+    top: -96px;
+    background-position: 198px 0;
+  }
+
+  .zones__eyebrow .zones__visual {
+    height: 174px;
+    top: -29px;
+    background-position: 192px 0;
+    background-size: 75%;
+  }
+
+  .zones__ear .zones__visual {
+    top: -61px;
+    background-position: 0px 0;
+    background-size: 104%;
+  }
+
+  .zones__eye .zones__visual {
+    height: 100px;
+    top: -70px;
+    background-position: 221px 0;
+    background-size: 69%;
+  }
+
+  .zones__nose .zones__visual {
+    height: 180px;
+    top: -113px;
+    background-position: 262px 0;
+    background-size: 56%;
+  }
+
+  .zones__lip .zones__visual {
+    height: 150px;
+    top: -70px;
+    background-position: 240px 0;
+    background-size: 61%;
+  }
+
+  .zones__jaw .zones__visual {
+    height: 200px;
+    top: -94px;
+    background-position: 88px 0;
+    background-size: 88%;
+  }
+
+  .zones__chin .zones__visual {
+    height: 216px;
+    top: -74px;
+    background-position: 200px 0;
+    background-size: 66%;
+  }
+
+  .zones__forehead.selected .zones__visual {
+    height: 200px;
+    top: -34px;
+    background-size: 50%;
+    background-position: 267px 0;
+  }
+
+  .zones__jaw.selected .zones__visual {
+    height: 320px;
+    top: -68px;
+    background-position: -18px 0;
+    background-size: 93%;
+  }
+
+  .zones__chin.selected .zones__visual {
+    top: -16px;
+    background-position: 256px 0;
+    background-size: 49%;
+  }
+
+  .zones__lip.selected .zones__visual {
+    height: 201px;
+    top: -37px;
+    background-position: 230px 0px;
+    background-size: 54%;
+  }
+
+  .zones__nose.selected .zones__visual {
+    height: 180px;
+    top: -49px;
+    background-size: 63%;
+    background-position: 184px 0;
+  }
+
+  .zones__eye.selected .zones__visual {
+    height: 200px;
+    top: -44px;
+    background-position: 210px 0;
+    background-size: 61%;
+  }
+
+  .zones__ear.selected .zones__visual {
+    height: 200px;
+    top: -21px;
+    background-position: 34px 0;
+    background-size: 83%;
+  }
+
+  .zones__eyebrow.selected .zones__visual {
+    height: 120px;
+    top: 15px;
+    background-position: 243px 0;
+    background-size: 58%;
+  }
+  .zones__forehead.selected .zones__visual {
+    height: 130px;
+    top: -34px;
+    background-size: 50%;
+    background-position: 267px 0;
+  }
+}

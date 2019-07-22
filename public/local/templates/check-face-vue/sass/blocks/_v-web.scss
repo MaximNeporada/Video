@@ -1,0 +1,147 @@
+.v-web {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  padding: 70px;
+
+  z-index: 1;
+  overflow: hidden;
+}
+.v-web__available {
+  position: absolute;
+  top: 70px;
+  right: 70px;
+  z-index: 2;
+}
+.v-web__available-text {
+  margin: 0;
+  padding: 0;
+
+  @include font-height(14px, 16px);
+  color: $text-style-6;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+  font-style: italic;
+}
+.v-web__available-count {
+  color: $text-style-1;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 300;
+}
+.v-web__container {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.v-web__container-scroll {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  box-sizing: content-box;
+}
+.v-web__title {
+  margin: 0;
+  padding: 0;
+  padding-left: 35px;
+  margin-bottom: 30px;
+
+  @include font-height(16px, 18px);
+  color: $text-style-6;
+  letter-spacing: 0.6px;
+  font-weight: 300;
+  text-align: left;
+}
+.v-web__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  margin-top: -25px;
+}
+
+.v-web__wrapper:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.v-web__item {
+  position: relative;
+  width: calc(50% - 40px);
+  padding: 15px;
+  margin-top: 25px;
+
+  border: 1px dashed rgba(0, 183, 244, 0.35);
+}
+.v-web__item-title {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 35px;
+
+  @include font-height(14px, 16px);
+  color: $text-style-1;
+  letter-spacing: 0.6px;
+  font-weight: 300;
+  text-align: left;
+
+  transform: translateY(-50%);
+}
+
+.v-web__item-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.v-web__btn {
+  display: none;
+  position: absolute;
+  left: 50%;
+  margin-left: -125px;
+  height: 40px;
+  width: 250px;
+  padding: 0;
+
+  text-align: center;
+
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  z-index: 12;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  &:hover .v-web__btn-svg {
+    fill: $bg-style-3;
+  }
+}
+.v-web__btn.active {
+  display: block;
+}
+
+.v-web__btn--scroll-top {
+  top: 35px;
+  transform: rotate(180deg);
+}
+.v-web__btn--scroll-bottom {
+  bottom: 35px;
+}
+.v-web__btn-svg {
+  vertical-align: middle;
+  width: 50px;
+  height: 30px;
+  fill: $bg-style-2;
+}
