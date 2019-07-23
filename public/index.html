@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -19,7 +20,7 @@
                 <p class="v-trainin__sub-title">Выбери черту которую хотел бы изучить</p>
             </div>
         </div>
-        <div class="v-trainin__container">
+        <div class="v-trainin__container v-trainin__container--main">
             <div class="v-trainin__body">
                 <!--  класс selected означает что выбрали даную часть тела(click по ссылке) -->
                 <!--  класс done означает что даную часть тела прошли -->
@@ -30,67 +31,67 @@
                     <img class="v-trainin__main-img-footer" src="./assets/images/robot-footer.png" alt="Фото робота">
                 </div>
                 <div class="v-trainin__zones zones">
-                    <div class="zones__top-zone zones__block done">
-                        <p href="javascript:void(0);" class="zones-block__text zones-block__text--profile">Верхняя
+                    <div class="zones__top-zone zones__block ">
+                        <p class="zones-block__text zones-block__text--profile">Верхняя
                             зона</p>
-                        <p href="javascript:void(0);" class="zones-block__text zones-block__text--fullface">Верхняя
+                        <p class="zones-block__text zones-block__text--fullface">Верхняя
                             зона</p>
                         <div class="zones__visual"></div>
 
                     </div>
-                    <div class="zones__forehead zones__block done" data-zone="forehead">
+                    <div class="zones__forehead zones__block " data-zone="forehead">
                         <a href="javascript:void(0);" class="zones-block__link zones-block__link--profile">Лоб</a>
                         <a href="javascript:void(0);" class="zones-block__link zones-block__link--fullface">Лоб</a>
                         <div class="zones__visual"></div>
                     </div>
-                    <div class="zones__eyebrow zones__block done" data-zone="eyebrow">
+                    <div class="zones__eyebrow zones__block " data-zone="eyebrow">
                         <a href="javascript:void(0);" class="zones-block__link zones-block__link--profile">Брови</a>
                         <a href="javascript:void(0);" class="zones-block__link zones-block__link--fullface">Брови</a>
                         <div class="zones__visual"></div>
                     </div>
-                    <div class="zones__ear zones__block done" data-zone="ear">
+                    <div class="zones__ear zones__block " data-zone="ear">
                         <a href="javascript:void(0);" class="zones-block__link zones-block__link--profile">Уши</a>
                         <a href="javascript:void(0);" class="zones-block__link zones-block__link--fullface">Уши</a>
                         <div class="zones__visual"></div>
                     </div>
-                    <div class="zones__eye zones__block done" data-zone="eye">
+                    <div class="zones__eye zones__block " data-zone="eye">
                         <a href="javascript:void(0);" class="zones-block__link zones-block__link--profile">Глаза</a>
                         <a href="javascript:void(0);" class="zones-block__link zones-block__link--fullface">Глаза</a>
                         <div class="zones__visual"></div>
                     </div>
 
-                    <div class="zones__middle-zone zones__block done" data-zone="middle-zone">
-                        <p href="javascript:void(0);" class="zones-block__text zones-block__text--profile">Средняя
+                    <div class="zones__middle-zone zones__block " data-zone="middle-zone">
+                        <p class="zones-block__text zones-block__text--profile">Средняя
                             зона</p>
-                        <p href="javascript:void(0);" class="zones-block__text  zones-block__text--fullface">Средняя
+                        <p class="zones-block__text  zones-block__text--fullface">Средняя
                             зона</p>
                         <div class="zones__visual"></div>
 
                     </div>
-                    <div class="zones__nose zones__block done" data-zone="nose">
+                    <div class="zones__nose zones__block " data-zone="nose">
                         <a href="javascript:void(0);" class="zones-block__link zones-block__link--profile">Нос</a>
                         <a href="javascript:void(0);" class="zones-block__link zones-block__link--fullface">Нос</a>
                         <div class="zones__visual"></div>
                     </div>
-                    <div class="zones__bottom-zone zones__block done" data-zone="bottom-zone">
-                        <p href="javascript:void(0);" class="zones-block__text zones-block__text--profile">Нижняя
+                    <div class="zones__bottom-zone zones__block " data-zone="bottom-zone">
+                        <p class="zones-block__text zones-block__text--profile">Нижняя
                             зона</p>
-                        <p href="javascript:void(0);" class="zones-block__text zones-block__text--fullface">Нижняя
+                        <p class="zones-block__text zones-block__text--fullface">Нижняя
                             зона</p>
                         <div class="zones__visual"></div>
 
                     </div>
-                    <div class="zones__lip zones__block done" data-zone="lip">
+                    <div class="zones__lip zones__block " data-zone="lip">
                         <a href="javascript:void(0);" class="zones-block__link zones-block__link--profile">Губы</a>
                         <a href="javascript:void(0);" class="zones-block__link zones-block__link--fullface">Губы</a>
                         <div class="zones__visual"></div>
                     </div>
-                    <div class="zones__jaw zones__block done" data-zone="jaw">
+                    <div class="zones__jaw zones__block " data-zone="jaw">
                         <a href="javascript:void(0);" class="zones-block__link zones-block__link--profile">Челюсть</a>
                         <a href="javascript:void(0);" class="zones-block__link zones-block__link--fullface">Челюсть</a>
                         <div class="zones__visual"></div>
                     </div>
-                    <div class="zones__chin zones__block done" data-zone="chin">
+                    <div class="zones__chin zones__block " data-zone="chin">
                         <a href="javascript:void(0);"
                             class="zones-block__link zones-block__link--profile">Подбородок</a>
                         <a href="javascript:void(0);"
@@ -130,7 +131,7 @@
             v-popups--position-bottom-light  === расположение попапа ниже центра на 80px
             v-popups--position-right === расположение попапа правее-->
 
-        <div class="v-trainin__popups">
+        <div class="v-trainin__popups activec">
             <div class="v-trainin__popups-container" data-zone-popup="jaw">
                 <div class="v-popups v-popups--position-bottom">
                     <h2 class="v-popups__title v-popups__tittle--middle-right">Нижняя челюсть</h2>
@@ -1170,8 +1171,7 @@
                     </div>
                 </div>
             </div>
-            <div class="v-trainin__popups-container  v-trainin__popups-container--background show "
-                data-zone-popup="web">
+            <div class="v-trainin__popups-container  v-trainin__popups-container--background " data-zone-popup="web">
                 <img class="v-trainin__popup-background" src="./assets/images/popup-background.png" alt="задний фон">
                 <div class="v-web">
                     <div class="v-web__available">
@@ -1739,174 +1739,9 @@
             </div>
         </div>
     </div>
-    <script src="./local/templates/check-face-vue/js/main.min.js"></script>
-    <script>
-        function hoverLinkZones() {
-            const arrLinks = document.querySelectorAll('.zones-block__link');
-            arrLinks.forEach(element => {
-                element.addEventListener('mouseenter', function () {
-                    let parent = element.parentElement;
-                    let allLink = parent.querySelectorAll('.zones-block__link');
-                    allLink.forEach(element => {
-                        element.classList.add('hover');
-                    });
-                });
-                element.addEventListener('mouseleave', function () {
-                    let parent = element.parentElement;
-                    let allLink = parent.querySelectorAll('.zones-block__link');
-                    allLink.forEach(element => {
-                        element.classList.remove('hover');
-                    });
-                })
-            });
-        }
-
-        function eventdontShowScroll() {
-            var parent = document.querySelector('.v-web__cotainer');
-            var child = document.querySelector('.v-web__container-scroll');
-            child.style.paddingRight = child.offsetWidth - child.clientWidth + "px";
-        }
-
-        function eventLinkClick() {
-            var arrLinksZone = document.querySelectorAll('.zones-block__link');
-            var arrLinksOther = document.querySelectorAll('.v-other-menu__button');
-            arrLinksZone.forEach(element => {
-                element.addEventListener('click', function () {
-                    linkClick(this);
-                });
-            });
-            arrLinksOther.forEach(element => {
-                element.addEventListener('click', function () {
-                    linkClick(this);
-                });
-            });
-        }
-        function linkClick(link) {
-            linkRemoveClassSelected();
-            var parent = link.parentElement;
-            var arrPopups = document.querySelectorAll('.v-trainin__popups-container');
-            console.log(parent);
-            console.log("parent ^");
-
-            var parentData = parent.getAttribute('data-zone');
-            arrPopups.forEach(element => {
-                var elementData = element.getAttribute('data-zone-popup');
-                console.log(elementData);
-                if (elementData === parentData) {
-                    console.log(element);
-                    eventPopupOpen(element);
-                }
-            });
-            parent.classList.add("selected");
-        }
-        function linkRemoveClassSelected() {
-            var arrLinksZone = document.querySelectorAll('.zones__block.selected');
-            var arrLinksOther = document.querySelectorAll('.v-other-menu__item.selected');
-            if (arrLinksZone.length > 0) {
-                arrLinksZone.forEach(element => {
-                    element.classList.remove('selected');
-                });
-            }
-            if (arrLinksOther.length > 0) {
-                arrLinksOther.forEach(element => {
-                    element.classList.remove('selected');
-                });
-            }
-        }
-        function eventPopupOpen(popupContainer) {
-            closeAllPopup();
-            var vPopupWrapper = document.querySelector('.v-trainin__popups');
-            vPopupWrapper.classList.add('active');
-            popupContainer.classList.add('show');
-        }
-
-
-        function eventPopupCLose() {
-            var vPopupWrapper = document.querySelector('.v-trainin__popups');
-            vPopupWrapper.addEventListener('click', function (e) {
-                var target = e.target;
-                if (target === vPopupWrapper) {
-                    closeAllPopup();
-                };
-
-            })
-
-            window.onkeydown = function (event) {
-                if (event.keyCode == 27) {
-                    closeAllPopup();
-                }
-            };
-        }
-
-        function closeAllPopup() {
-            var vPopupWrapper = document.querySelector('.v-trainin__popups');
-            var arrPopups = document.querySelectorAll('.v-trainin__popups-container');
-            arrPopups.forEach(element => {
-
-                element.classList.remove('show');
-            });
-            vPopupWrapper.classList.remove('active');
-            linkRemoveClassSelected();
-        }
-
-        function eventScrollOnPopup() {
-            var arrScrollElement = document.querySelectorAll('.js-scroll-element');
-            arrScrollElement.forEach(element => {
-                var parent = element.parentNode;
-                var buttonBottom = parent.querySelector('.v-web__btn--scroll-bottom');
-                var buttonTop = parent.querySelector('.v-web__btn--scroll-top');
-                console.log(parent);
-                console.log(buttonTop);
-                console.log(buttonBottom);
-                element.addEventListener('scroll', function (e) {
-                    var scrolled = element.scrollTop;
-                    console.log(scrolled);
-                    if (scrolled <= 50) {
-                        buttonBottom.classList.add('active');
-                        buttonTop.classList.remove('active')
-                    } else if (scrolled >= element.scrollHeight - element.offsetHeight - 50) {
-                        buttonBottom.classList.remove('active');
-                        buttonTop.classList.add('active');
-                    } else {
-                        buttonBottom.classList.add('active');
-                        buttonTop.classList.add('active');
-                    }
-                });
-
-                buttonBottom.addEventListener('click', function () {
-                    var scrollTopElement = element.offsetHeight - 50;
-                    scrollTopElement > element.scrollHeight - element.offsetHeight ? scrollTopElement = element.scrollHeight - element.offsetHeight : scrollTopElement;
-                    console.log(scrollTopElement);
-                    element.scrollTo({
-                        top: scrollTopElement,
-                        behavior: "smooth"
-                    });
-                });
-
-                buttonTop.addEventListener('click', function () {
-                    var scrollTopElement = element.scrollTop - element.offsetHeight;
-                    scrollTopElement < 0 ? scrollTopElement = 0 : scrollTopElement;
-                    console.log(scrollTopElement);
-                    element.scrollTo({
-                        top: scrollTopElement,
-                        behavior: "smooth"
-                    });
-                });
-
-            });
-
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            eventScrollOnPopup();
-            eventLinkClick();
-            eventPopupCLose();
-            hoverLinkZones();
-            eventdontShowScroll();
-        });
-
-    </script>
     <script src="./local/templates/check-face-vue/js/vendor/svg4everybody.min.js"></script>
+    <script src="./local/templates/check-face-vue/js/main.min.js"></script>
+
 </body>
 
 </html>

@@ -126,3 +126,13 @@
   opacity: 0.46;
   box-shadow: none;
 }
+
+@media all and (max-width: $big-tablet-width) {
+  .level__list {
+    margin-top: -10px;
+  }
+
+  .level__item {
+    margin-top: 10px;
+  }
+}

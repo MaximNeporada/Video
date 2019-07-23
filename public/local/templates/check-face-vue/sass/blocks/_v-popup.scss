@@ -102,3 +102,67 @@
 .v-popups--position-right {
   left: 80px;
 }
+
+@media all and (max-width: $desktop-width) {
+  .v-popups--position-bottom {
+    top: auto;
+  }
+
+  .v-popups--position-bottom-light {
+    top: auto;
+  }
+
+  .v-popups--position-right {
+    left: auto;
+  }
+}
+
+@media all and (max-width: $tablet-width) {
+  .v-trainin__popups-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 15px;
+  }
+  .v-trainin__popups-container .v-popups {
+    width: 100%;
+    max-height: none;
+    background: transparent;
+    box-shadow: none;
+    max-height: none;
+    overflow: visible;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .v-popups::after,
+  .v-popups::before {
+    display: none;
+  }
+  .v-popups__title {
+    position: relative;
+    width: auto;
+    transform: none;
+    max-width: 100%;
+    width: auto;
+    top: 0;
+    left: 0;
+    right: auto;
+    display: inline-block;
+    margin-bottom: 10px;
+    align-self: flex-start;
+  }
+
+  .v-popups__tittle--right {
+    align-self: flex-end;
+  }
+
+  .v-popups__tittle--middle-right {
+    align-self: center;
+  }
+
+  .v-popups__wrapper-column {
+    flex-direction: column;
+    width: 100%;
+  }
+}

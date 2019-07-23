@@ -145,3 +145,14 @@
   height: 30px;
   fill: $bg-style-2;
 }
+
+@media all and (max-width: $big-tablet-width) {
+  .v-web {
+    padding: 40px;
+  }
+
+  .v-web__available {
+    top: 40px;
+    right: 40px;
+  }
+}

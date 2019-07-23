@@ -35,3 +35,12 @@
   color: #b5aeac;
   letter-spacing: 0.6px;
 }
+
+@media all and (max-width: $tablet-width) {
+  .v-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

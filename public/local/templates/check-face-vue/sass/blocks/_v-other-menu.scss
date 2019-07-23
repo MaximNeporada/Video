@@ -65,3 +65,53 @@
 .done .v-other-menu__button::after {
   background-color: $bg-style-9;
 }
+
+@media all and (max-width: $tablet-width) {
+  .v-other-menu,
+  .v-other-menu__list {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .v-other-menu__list {
+    margin-top: -20px;
+  }
+
+  .v-other-menu__item {
+    margin: 0 10px;
+    margin-top: 20px;
+    width: calc(33.3% - 20px);
+    display: flex;
+  }
+
+  .selected .v-other-menu__button,
+  .selected .v-other-menu__button.active,
+  .selected .v-other-menu__button:active,
+  .selected .v-other-menu__button:hover,
+  .v-other-menu__button.active,
+  .v-other-menu__button:hover {
+    transform: none;
+    width: 100%;
+    font-size: 14px;
+    animation: none !important;
+  }
+
+  @keyframes animLeft {
+    0% {
+    }
+    100% {
+    }
+  }
+}
+
+@media all and (max-width: 550px) {
+  .v-other-menu__list {
+    margin-top: -10px;
+  }
+  .v-other-menu__item {
+    width: 100%;
+    margin: 0;
+    margin-top: 10px;
+  }
+}
